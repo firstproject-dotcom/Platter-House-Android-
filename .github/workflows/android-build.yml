@@ -21,7 +21,6 @@ jobs:
           ls -la
           if [ ! -f gradlew ]; then
             echo "ERROR: No gradlew file found in the repository root."
-            echo "The Android project files must be uploaded before an APK can be built."
             exit 1
           fi
 
@@ -43,3 +42,4 @@ jobs:
           name: Platter-House-Android-APK
           path: '**/build/outputs/apk/debug/*.apk'
           if-no-files-found: error
+
